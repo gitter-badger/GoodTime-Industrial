@@ -70,7 +70,7 @@ public class BlockEVSU extends BlockContainer {
 
     public BlockEVSU() {
         super(Material.iron);
-        this.setCreativeTab(creativeTabGti);
+        this.setCreativeTab(TAB_GTI);
         this.setHardness(1.5F);
         this.setStepSound(soundTypeMetal);
         this.setBlockName(MOD_ID + "." + "block" + "." + "EVSU");

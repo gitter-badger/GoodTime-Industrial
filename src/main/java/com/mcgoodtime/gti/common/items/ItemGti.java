@@ -46,7 +46,7 @@ public class ItemGti extends Item {
     public ItemGti(String name) {
         this.setUnlocalizedName(MOD_ID + "." + name);
         this.setTextureName(RESOURCE_DOMAIN + ":" + "item" + name);
-        this.setCreativeTab(creativeTabGti);
+        this.setCreativeTab(TAB_GTI);
         GameRegistry.registerItem(this, name, MOD_ID);
     }
 

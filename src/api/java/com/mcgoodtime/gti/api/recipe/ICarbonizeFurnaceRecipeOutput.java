@@ -22,17 +22,26 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.mcgoodtime.gti.common.items.tools;
+package com.mcgoodtime.gti.api.recipe;
 
-import net.minecraft.item.ItemPickaxe;
+import net.minecraft.item.ItemStack;
 
-import static com.mcgoodtime.gti.common.core.Gti.TAB_GTI;
+import java.util.List;
 
-public class IridiumPickaxe extends ItemPickaxe {
-    public IridiumPickaxe() {
-        super(GtiToolMaterial.iridium);
-        this.setCreativeTab(TAB_GTI);
-        this.setUnlocalizedName("gti.tool.iridiumPickaxe");
-        this.setTextureName("gti:itemIridiumPickaxe");
-    }
+/**
+ * The interface for the output of the carbonize furnace recipe.
+ * @since 0.0.1
+ */
+public interface ICarbonizeFurnaceRecipeOutput {
+    /**
+     * The output of a certain recipe.
+     * @return the full list of the output item stack
+     */
+    List<ItemStack> getOutput();
+
+    /**
+     * The experience award of a certain recipe.
+     * @return the experience of the recipe
+     */
+    float getExperience();
 }

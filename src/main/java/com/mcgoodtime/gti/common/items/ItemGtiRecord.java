@@ -50,7 +50,7 @@ public class ItemGtiRecord extends ItemRecord {
     public ItemGtiRecord(String name) {
         super(name);
         this.name = name;
-        this.setCreativeTab(Gti.creativeTabGti);
+        this.setCreativeTab(Gti.TAB_GTI);
         this.setUnlocalizedName(MOD_ID + "." + "record" + "." + name);
         this.setTextureName(Gti.RESOURCE_DOMAIN + ":" + name);
         GameRegistry.registerItem(this, name, MOD_ID);

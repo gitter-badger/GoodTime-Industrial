@@ -29,6 +29,7 @@ import static com.mcgoodtime.gti.common.core.Gti.RESOURCE_DOMAIN;
 public class GuiEVSU extends GuiContainer {
 
     private final ContainerEVSU container;
+    @SuppressWarnings("unused")
     private final String armorInv;
     private final String level;
     private final String name;
@@ -44,6 +45,7 @@ public class GuiEVSU extends GuiContainer {
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public void initGui(){
         super.initGui();
         this.buttonList.add(new GuiIconButton(0,
@@ -74,7 +76,7 @@ public class GuiEVSU extends GuiContainer {
     @Override
     protected void drawGuiContainerBackgroundLayer(float f, int x, int y){
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-        this.mc.getTextureManager().bindTexture(this.BACKGROUND);
+        this.mc.getTextureManager().bindTexture(BACKGROUND);
         int j = (this.width - this.xSize) / 2; //Good here
         int k = (this.height - this.ySize) / 2; //good here
         this.drawTexturedModalRect(j, k, 0, 0, this.xSize, this.ySize);//Renders the actual gui texture.

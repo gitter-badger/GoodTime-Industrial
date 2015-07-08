@@ -116,7 +116,7 @@ public class GtiItems implements IFuelHandler {
 
         diamondApple = diamondApple
                 .setUnlocalizedName("gti.food.DiamondApple")
-                .setCreativeTab(Gti.creativeTabGti)
+                .setCreativeTab(Gti.TAB_GTI)
                 .setTextureName("gti:itemDiamondApple");
         iridiumPickaxe = new IridiumPickaxe();
 

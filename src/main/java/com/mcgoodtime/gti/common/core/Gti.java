@@ -27,6 +27,7 @@ package com.mcgoodtime.gti.common.core;
 import com.mcgoodtime.gti.common.blocks.fluid.Gas;
 import com.mcgoodtime.gti.common.init.*;
 import com.mcgoodtime.gti.common.worldgen.WorldGenerationHandler;
+
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Instance;
@@ -38,8 +39,11 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.AchievementPage;
 import net.minecraftforge.fluids.FluidRegistry;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 @Mod(
         modid = Gti.MOD_ID,
@@ -57,17 +61,34 @@ public final class Gti {
     public static final String VERSION = "Dev.0.1";
     public static final String RESOURCE_DOMAIN = "gti";
     public static final String GUI_PREFIX = "gui.gti.";
-    public static final CreativeTabs creativeTabGti = new CreativeTabs(MOD_NAME) {
+
+    public static final CreativeTabs TAB_GTI = new CreativeTabs(MOD_ID) {
         @SideOnly(Side.CLIENT)
         @Override
         public Item getTabIconItem() {
-            return GtiItems.diamondApple;
+            return null;
+        }
+
+        @SideOnly(Side.CLIENT)
+        @Override
+        public String getTranslatedTabLabel() {
+            return "tab." + this.getTabLabel() + ".name";
+        }
+
+        @SideOnly(Side.CLIENT)
+        @Override
+        public ItemStack getIconItemStack() {
+            return new ItemStack(GtiItems.diamondApple, 8);
         }
     };
+
     @Mod.Metadata
     public ModMetadata meta = new ModMetadata();
+
     @Instance(Gti.MOD_ID)
     public static Gti instance;
+
+    public static final Logger LOG = LogManager.getLogger(Gti.MOD_ID);
    
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {

@@ -24,6 +24,9 @@ item.DiamondPlate.name=Diamond Plate
 item.DenseDiamondPlate.name=Dense Diamond Plate
 item.HeatInsulationBoard.name=Heat Insulation Board
 
+# Creative Tab
+tab.gti.name=GoodTime-Industrial
+
 //----Ore
 tile.iridiumore.name=Iridium Ore
 

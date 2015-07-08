@@ -24,7 +24,7 @@
  */
 package com.mcgoodtime.gti.common.blocks;
 
-import static com.mcgoodtime.gti.common.core.Gti.creativeTabGti;
+import static com.mcgoodtime.gti.common.core.Gti.TAB_GTI;
 
 import com.mcgoodtime.gti.common.core.Gti;
 import com.mcgoodtime.gti.common.core.GuiHandler;
@@ -39,7 +39,7 @@ import net.minecraft.world.World;
 public class GenGasKu extends BlockContainer {
     public GenGasKu() {
         super(Material.rock);
-        this.setCreativeTab(creativeTabGti);
+        this.setCreativeTab(TAB_GTI);
         this.setBlockName("gti.block.GenGasKu");
         this.setBlockTextureName("gti:GenGasKu");
     }

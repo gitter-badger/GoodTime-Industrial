@@ -50,7 +50,7 @@ public class ItemGtiTreetap extends Item implements IBoxable {
     public ItemGtiTreetap(String name, int damage) {
         this.setUnlocalizedName(MOD_ID + ".tool." + name);
         this.setTextureName(RESOURCE_DOMAIN + ":" + "item" + name);
-        this.setCreativeTab(creativeTabGti);
+        this.setCreativeTab(TAB_GTI);
         this.setMaxDamage(damage);
         this.setMaxStackSize(1);
         GameRegistry.registerItem(this, name, MOD_ID);

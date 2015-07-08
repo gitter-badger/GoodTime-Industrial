@@ -24,7 +24,7 @@
  */
 package com.mcgoodtime.gti.common.blocks;
 
-import static com.mcgoodtime.gti.common.core.Gti.creativeTabGti;
+import static com.mcgoodtime.gti.common.core.Gti.TAB_GTI;
 
 import com.mcgoodtime.gti.common.core.Gti;
 
@@ -53,7 +53,7 @@ public class BlockWaterHyacinth extends BlockBush {
     public BlockWaterHyacinth() {
         super(Material.plants);
         this.setBlockName("gti.block.WaterHyacinth");
-        this.setCreativeTab(creativeTabGti);
+        this.setCreativeTab(TAB_GTI);
         this.setBlockTextureName(Gti.RESOURCE_DOMAIN + ":" + "BlockWaterHyacinth");
         this.setHardness(0.0F);
         this.setResistance(0.0F);

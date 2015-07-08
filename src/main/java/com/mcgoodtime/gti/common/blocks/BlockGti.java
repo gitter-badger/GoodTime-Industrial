@@ -24,7 +24,7 @@
  */
 package com.mcgoodtime.gti.common.blocks;
 
-import static com.mcgoodtime.gti.common.core.Gti.creativeTabGti;
+import static com.mcgoodtime.gti.common.core.Gti.TAB_GTI;
 import static com.mcgoodtime.gti.common.core.Gti.RESOURCE_DOMAIN;
 import static com.mcgoodtime.gti.common.core.Gti.MOD_ID;
 
@@ -43,7 +43,7 @@ public class BlockGti extends Block {
     public BlockGti(Material material, String name, float hardness, float resistance,
                        String harvestLevelToolClass, int harvestLevel) {
         super(material);
-        this.setCreativeTab(creativeTabGti);
+        this.setCreativeTab(TAB_GTI);
         this.setBlockName(MOD_ID + "." + "block" + "." + name);
         this.setBlockTextureName(RESOURCE_DOMAIN + ":" + "block" + name);
         this.setHardness(hardness);
@@ -57,7 +57,7 @@ public class BlockGti extends Block {
         super(material);
         this.setBlockName(MOD_ID + "." + "block" + "." + name);
         this.setBlockTextureName(RESOURCE_DOMAIN + ":" + "block" + name);
-        this.setCreativeTab(creativeTabGti);
+        this.setCreativeTab(TAB_GTI);
         GameRegistry.registerBlock(this, name);
         GtiConfig.gtiLogger.log(Level.INFO, name + Integer.toString(Block.getIdFromBlock(this)));
     }

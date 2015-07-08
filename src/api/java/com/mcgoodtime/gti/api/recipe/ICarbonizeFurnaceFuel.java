@@ -22,17 +22,50 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.mcgoodtime.gti.common.items.tools;
+package com.mcgoodtime.gti.api.recipe;
 
-import net.minecraft.item.ItemPickaxe;
+import ic2.api.recipe.IRecipeInput;
+import net.minecraft.item.ItemStack;
 
-import static com.mcgoodtime.gti.common.core.Gti.TAB_GTI;
+import java.util.List;
 
-public class IridiumPickaxe extends ItemPickaxe {
-    public IridiumPickaxe() {
-        super(GtiToolMaterial.iridium);
-        this.setCreativeTab(TAB_GTI);
-        this.setUnlocalizedName("gti.tool.iridiumPickaxe");
-        this.setTextureName("gti:itemIridiumPickaxe");
-    }
+/**
+ * The interface for the fuel of carbonize furnace.
+ * @see ic2.api.recipe.IRecipeInput
+ * @since 0.0.1
+ */
+public interface ICarbonizeFurnaceFuel extends IRecipeInput {
+    /**
+     * Check if subject matches this recipe input, ignoring the amount.
+     * Match the ore dictionary please!
+     *
+     * @param subject ItemStack to check
+     * @return true if it matches the requirement
+     */
+    @Override
+    boolean matches(ItemStack subject);
+
+    /**
+     * Determine the minimum input stack size.
+     *
+     * @return input amount required
+     */
+    @Override
+    int getAmount();
+
+    /**
+     * List all possible inputs (best effort).
+     *
+     * The stack size is undefined, use getAmount to get the correct one.
+     *
+     * @return list of inputs, may be incomplete
+     */
+    @Override
+    List<ItemStack> getInputs();
+
+    /**
+     * Returns the time the stack of fuel could burn.
+     * @return the time
+     */
+    int getFuelPower();
 }
