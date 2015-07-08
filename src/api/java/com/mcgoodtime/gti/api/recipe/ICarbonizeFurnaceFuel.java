@@ -32,6 +32,7 @@ import java.util.List;
 /**
  * The interface for the fuel of carbonize furnace.
  * @see ic2.api.recipe.IRecipeInput
+ * @author liach
  * @since 0.0.1
  */
 public interface ICarbonizeFurnaceFuel extends IRecipeInput {

@@ -30,8 +30,9 @@ import net.minecraft.item.ItemStack;
 import java.util.List;
 
 /**
- * A general recipe for <link>CarbonizeFurnace</link>.
+ * A general recipe for {@link CarbonizeFurnaceRecipes}.
  * @see ic2.api.recipe.IRecipeInput
+ * @author liach
  * @since 0.0.1
  */
 public interface ICarbonizeFurnaceRecipeInput extends IRecipeInput {
@@ -55,7 +56,7 @@ public interface ICarbonizeFurnaceRecipeInput extends IRecipeInput {
     /**
      * List all required inputs.
      *
-     * The stack size is undefined, use getAmount to get the correct one.
+     * The stack size is defined, use getAmount to get the correct one.
      *
      * @return list of inputs
      */

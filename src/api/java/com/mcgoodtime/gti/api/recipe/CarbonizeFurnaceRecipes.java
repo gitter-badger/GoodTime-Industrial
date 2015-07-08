@@ -24,25 +24,28 @@
  */
 package com.mcgoodtime.gti.api.recipe;
 
-import net.minecraft.item.ItemStack;
+import cpw.mods.fml.relauncher.ReflectionHelper;
 
-import java.util.List;
+import java.util.Map;
 
-/**
- * The interface for the output of the carbonize furnace recipe.
- * @author liach
- * @since 0.0.1
- */
-public interface ICarbonizeFurnaceRecipeOutput {
-    /**
-     * The output of a certain recipe.
-     * @return the full list of the output item stack
-     */
-    List<ItemStack> getOutput();
+public class CarbonizeFurnaceRecipes {
+    private static final CarbonizeFurnaceRecipes instance = new CarbonizeFurnaceRecipes();
 
     /**
-     * The experience award of a certain recipe.
-     * @return the experience of the recipe
+     * The list of smelting results. Use {@link ReflectionHelper} to change it.
      */
-    float getExperience();
+    private Map<ICarbonizeFurnaceRecipeInput, ICarbonizeFurnaceRecipeOutput> recipeMap;
+
+    private CarbonizeFurnaceRecipes() {
+    }
+
+    /**
+     * Get instance function.
+     * @return the instance of this class
+     */
+    public static CarbonizeFurnaceRecipes getInstance() {
+        return instance;
+    }
+
+
 }
